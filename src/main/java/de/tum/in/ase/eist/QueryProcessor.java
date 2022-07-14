@@ -15,8 +15,8 @@ public class QueryProcessor {
            return "Mario";
         } else if (query.contains("plus")){ // TODO extend the programm here
             int sum = 0;
-            int indexNo1 = query.indexOf("is")+1;
-            int indexNo2 = query.indexOf("plus")+1;
+            int indexNo1 = query.indexOf("is")+3;
+            int indexNo2 = query.indexOf("plus")+5;
             if (indexNo1 != -1 && indexNo2 != -1){
                 sum = Integer.parseInt(query.substring(indexNo1,indexNo1+1)) +
                         Integer.parseInt(query.substring(indexNo2,indexNo2+1));

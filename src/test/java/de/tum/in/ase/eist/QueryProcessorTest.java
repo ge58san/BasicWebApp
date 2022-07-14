@@ -44,8 +44,13 @@ class QueryProcessorTest {
 	}
 
 	@Test
-	void testPlus() {
-		assertEquals("6", queryProcessor.process("what is 3 plus 2"));
+	void testPlusOK() {
+		assertEquals("7", queryProcessor.process("what is 3 plus 4"));
+	}
+
+	@Test
+	void testPlusWrong() {
+		assertEquals("0", queryProcessor.process("what is 3 plus 2"));
 	}
 
 }
