@@ -43,4 +43,9 @@ class QueryProcessorTest {
 		assertEquals("Mario", queryProcessor.process("name"));
 	}
 
+	@Test
+	void testPlus() {
+		assertEquals("6", queryProcessor.process("what is 3 plus 2"));
+	}
+
 }

@@ -13,8 +13,15 @@ public class QueryProcessor {
                     "writer in the English language and the world's pre-eminent dramatist.";
         } else if (query.contains("name")) {
            return "Mario";
-        } else if (query.contains("what is 6 plus 4")){ // TODO extend the programm here
-            return "10";
+        } else if (query.contains("plus")){ // TODO extend the programm here
+            int sum = 0;
+            int indexNo1 = query.indexOf("is")+1;
+            int indexNo2 = query.indexOf("plus")+1;
+            if (indexNo1 != -1 && indexNo2 != -1){
+                sum = Integer.parseInt(query.substring(indexNo1,indexNo1+1)) +
+                        Integer.parseInt(query.substring(indexNo2,indexNo2+1));
+            }
+            return String.valueOf(sum);
         } else {
             return "";
         }
