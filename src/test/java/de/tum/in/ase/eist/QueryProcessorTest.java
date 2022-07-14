@@ -30,4 +30,17 @@ class QueryProcessorTest {
 		}
 	}
 
+	@Test
+	void testWrongName() {
+		String actual = queryProcessor.process("name");
+		if (!actual.contains("Mario")) {
+			fail("The QueryProcessor does not know about Mario.");
+		}
+	}
+
+	@Test
+	void testOKName() {
+		assertEquals("Mario", queryProcessor.process("name"));
+	}
+
 }
